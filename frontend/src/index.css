@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 
+/* scrollbar mode not working */
+
 ::-webkit-scrollbar {
     width: 8px;
 }
