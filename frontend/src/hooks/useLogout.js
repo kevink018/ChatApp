@@ -16,17 +16,12 @@ const useLogout = () => {
             })
 
             const data = await res.json()
-            if (data.error) {
-                throw new Error(data.error)
-            }
 
             localStorage.removeItem('chat-user')
             setAuthUser(null)
 
         } catch (error) {
             toast.error(error.message)
-        } finally {
-            setLoading(false)
         }
 
     }

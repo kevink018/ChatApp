@@ -31,8 +31,6 @@ export const sendMessage = async (req, res) => {
             conversation.messages.push(newMessage._id);
         }
 
-        // SOCKET TO FUNCTIONS here
-
         // need to save in order for database to show up,
         //it is pushed to newMessage but never save without 2 lines below
         // await conversation.save();
@@ -40,7 +38,6 @@ export const sendMessage = async (req, res) => {
 
         //do this instead of 2 lines above, this will run in parallel
         // they both run at the exact same time
-        await Promise.all([conversation.save(), newMessage.save()]);
 
         res.status(201).json(newMessage);
 

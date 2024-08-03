@@ -1,8 +1,6 @@
 import {useEffect} from 'react'
 import Messages from './Messages'
 import MessageInput from './MessageInput'
-import {TiMessages} from "react-icons/ti"
-import useConversation from '../../zustand/useConversation'
 
 const MessageContainer = () => {
     // const noChatSelected = true;
@@ -47,7 +45,6 @@ const NoChatSelected = () => {
             <div className='px-4 text-center sm:text md:text-xl text-gray-200 font-semibold flex flex-col items-center gap-2'>
                 <p> Welcome to Chat Room</p>
                 <p> Start Chatting with Friends</p>
-                <TiMessages className ='text-3xl md:text-6xl text-center' />
             </div>
         </div>
     )

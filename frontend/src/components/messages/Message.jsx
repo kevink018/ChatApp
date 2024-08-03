@@ -10,22 +10,17 @@ const Message = ({message}) => {
     const fromMe = message.senderId === authUser._id;
     //make from me and from another user with different message color
     const chatClassName = fromMe ? 'chat-end' : 'chat-start';
-    //show profile each next to each msg
-    const profilePic = fromMe ? authUser.profilePic: selectedConversation?.profilePic;
-    const bubbleBgColor = fromMe ? 'bg-blue-500' : '';
-
 
   return (
     // <div className='chat chat-end'>
     <div className={`chat ${chatClassName}`}>
         <div className='chat-image avatar'>
             <div className='w-10 rounded-full'>
-                {/* <img alt='Tailwind css chat bubble component' src={profilePic}/> */}
-                <img alt='avatar' src={profilePic}/>
+                <img alt='avatar'/>
             </div>
         </div>
 
-        <div className={`chat-bubble text-white ${bubbleBgColor}`}>
+        <div className={`chat-bubble text-white`}>
             {/* Hi! Whats up! */}
             {message.message}
         </div>

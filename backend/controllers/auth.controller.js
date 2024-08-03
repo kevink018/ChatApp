@@ -25,12 +25,6 @@ export const signup = async (req, res) => {
         }
 
         //Hash password here
-        const salt = await bcrypt.genSalt(10);
-        const hashPassword = await(bcrypt.hash(password, salt));
-
-        //https://avatar-placeholder.iran.liara.run/
-        const boyProfilePic = `https://avatar-placeholder.iran.liara.run/public/boy?username=${username}`
-        const girlProfilePic = `https://avatar-placeholder.iran.liara.run/public/girl?username=${username}`
         
         const newUser = new User ({
             fullName, 
@@ -90,16 +84,3 @@ export const login = async (req, res) => {
     }
 
 };
-
-export const logout = (req, res) => {
-    try {
-        res.cookie("jwt", "", {maxAge:0});
-        res.status(200).json({message: "Logged out successfully"});
-    }
-
-    catch (error) {
-        console.log("Error in login controller", error.message);
-        res.status(500).json({error: "Internal Sever Error"});
-    }
-}
-

@@ -1,5 +1,4 @@
 // import React from 'react'
-import {BsSend} from "react-icons/bs"
 import {useState} from 'react'
 import useSendMessage from "../../hooks/useSendMessage"
 

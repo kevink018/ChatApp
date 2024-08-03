@@ -1,5 +1,4 @@
 // import React from 'react'
-import { Link } from 'react-router-dom'
 import {useState} from 'react'
 import useLogin from '../../hooks/useLogin'
 
@@ -51,15 +50,13 @@ const Login = () => {
                     />
                 </div>
 
-                <Link to={'/signup'} className='text-sm hover:underline hover:text-blue-600 mt-2 inline-block'>
+                <div to={'/signup'} className='text-sm hover:underline hover:text-blue-600 mt-2 inline-block'>
                     {"Don't"} have an account?
-                </Link>
+                </div>
                 <div>
                     <button className='btn btn-block btn-sm mt-2'
                         disabled={loading}
-                    >  
-                        {loading ? <span className='loading loading-spinner '></span> : "Login"}
-                    
+                    > 
                     </button>
                 </div>
             </form>
